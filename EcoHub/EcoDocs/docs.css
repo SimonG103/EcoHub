@@ -1,0 +1,135 @@
+/* Keep the flex layout and positioning without additional styling */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 150px;
+    width: fit-content;
+}
+
+header button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text */
+    width: 160px; /* Adjust width to accommodate both text and arrow */
+    height: 35px;
+    margin-right: 30px;
+    background-color: rgba(0,183,170,255);
+    border-radius: 5px;
+    padding: 0 10px; /* Optional: Adds some padding for inner spacing */
+    cursor: pointer;
+    border: none;
+}
+
+header button a {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 5px; /* Space between text and arrow */
+    display: inline-flex; /* Ensures the text stays in a single line */
+    align-items: center; /* Centers text vertically */
+    position: relative;
+    left: 15px;
+}
+
+#arrow {
+    height: 25px; /* Adjust size of the arrow */
+    width: 25px;
+    position: relative;
+    left: 30px;
+    opacity: 0;
+    transition: all 0.25s;
+}
+
+header button:hover #arrow {
+    transition: all 0.25s;
+    opacity: 1;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+}
+
+header nav ul li {
+    position: relative; /* Important for dropdown */
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    margin-left: 10px;
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Darken parent link on hover */
+header nav ul li:hover a {
+    color: #333; /* Dark Gray */
+}
+
+/* Green background with white text for the Topics dropdown */
+header nav ul li ul {
+    display: none; /* Hide the dropdown by default */
+    position: absolute; /* Dropdown should appear below the parent */
+    top: 100%; /* Position the dropdown directly below */
+    left: 0;
+    background-color: rgba(0, 183, 170, 255); /* Green background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    border-radius: 5px; /* Smooth corners */
+    min-width: 200px; /* Ensure the dropdown is wide enough */
+    z-index: 10;
+    padding: 10px 0; /* Adds space around the items */
+    opacity: 0; /* Start with dropdown hidden */
+    visibility: hidden; /* Hide it initially */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
+}
+
+/* Dropdown item styling */
+header nav ul li ul li {
+    padding: 10px 20px; /* Space around the items */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+/* Make text white for dropdown items */
+header nav ul li ul li a {
+    color: white !important; /* Ensure white text for dropdown items */
+    font-size: 18px;
+    text-decoration: none;
+    display: block; /* Ensure the link fills the entire area */
+}
+
+/* Change background color when hovering over dropdown items */
+header nav ul li ul li:hover {
+    background-color: rgba(0, 140, 125, 255); /* Darker green shade on hover */
+}
+
+/* Show dropdown on hover */
+header nav ul li:hover ul {
+    display: block;
+    opacity: 1; /* Fade in */
+    visibility: visible; /* Make it visible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
+}
+
+header nav ul li:hover a {
+    color: #333; /* Darken the parent link when hovered */
+}
