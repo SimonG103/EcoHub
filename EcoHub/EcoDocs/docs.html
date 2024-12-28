@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoDocs</title>
     <link rel="stylesheet" href="./docs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -24,12 +27,40 @@
                 </li>
                 <li><a href="">About Us</a></li>
                 <li><a href="">Get Involved</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li>
+                    <a href="">Contact Us</a>
+                    <ul>
+                        <li><a href="">Discord</a></li>
+                        <li><a href="">Gmail</a></li>
+                    </ul>
+                </li>
             </ul>
-        </nav>
-        <button><a href="">Log in</a> <img src="./Assets/arrow2.png" id="arrow"></button>
-        
-        
+        </nav>        
     </header>
+    <main>
+        <h1>EcoHub Metrics</h1>
+        <div id="counter-section">
+            <div id="treesPlanted" class="counter">
+                <p class="counterTitle">Trees planted this year</p>
+                <p class="counterBio">On avrage 1.9 Billion trees are planted each year</p>
+                <div id="counterTrees">
+                    <figure>
+                        <img src="./Assets/treeIcon.png" alt="A green tree" id="greenTree">
+                    </figure>
+                    <p class="numbers"> Total: 1,900,000,000. <span class="expand">[+]</span></p>
+                </div>
+            </div>
+            <div id="deforestation" class="counter">
+                <p class="counterTitle">Trees lost this year</p>
+                <p class="counterBio">On avrage 15 Billion trees are lost each year</p>
+                <div id="counterLost">
+                    <figure>
+                        <img src="./Assets/cutIcon.png" alt="A tree lost " id="treeLost">
+                    </figure>
+                    <p class="numbers">Total: 15,000,000,000 <span class="expand">[+]</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
