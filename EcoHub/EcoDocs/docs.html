@@ -1,76 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoDocs</title>
-    <link rel="stylesheet" href="./docs.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <img src="./Assets/logo.png" alt="Website Logo">
-        <nav>
-            <ul>
-                <li>
-                    <a href="">Topics</a>
-                    <ul>
-                        <li><a href="">Climate Change</a></li>
-                        <li><a href="">Renewable Energy</a></li>
-                        <li><a href="">Pollution</a></li>
-                        <li><a href="">Deforestation</a></li>
-                        <li><a href="">Ocean Conservation</a></li>
-                        <li><a href="">Wildlife Protection</a></li>
-                    </ul>
-                </li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Get Involved</a></li>
-                <li>
-                    <a href="">Contact Us</a>
-                    <ul>
-                        <li><a href="https://discord.gg/YjQfcanjtK">Discord</a></li>
-                        <li><a href="">Gmail</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>        
-    </header>
-    <main>
-        <h1>EcoHub Metrics</h1>
-        <div id="counter-section">
-            <div id="treesPlanted" class="counter">
-                <p class="counterTitle">Trees planted this year</p>
-                <p class="counterBio">On avrage 1.9 Billion trees are planted each year</p>
-                <div id="counterTrees">
-                    <figure>
-                        <img src="./Assets/treeIcon.png" alt="A green tree" id="greenTree">
-                    </figure>
-                    <p class="numbers"> Total: 1,900,000,000. <span class="expand">[+]</span></p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EcoDocs</title>
+        <link rel="stylesheet" href="./docs.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <img src="./Assets/logo.png" alt="Website Logo" />
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">Topics</a>
+                        <ul>
+                            <li><a href="">Climate Change</a></li>
+                            <li><a href="">Renewable Energy</a></li>
+                            <li><a href="">Pollution</a></li>
+                            <li><a href="">Deforestation</a></li>
+                            <li><a href="">Ocean Conservation</a></li>
+                            <li><a href="">Wildlife Protection</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Get Involved</a></li>
+                    <li>
+                        <a href="">Contact Us</a>
+                        <ul>
+                            <li>
+                                <a href="https://discord.gg/YjQfcanjtK"
+                                    >Discord</a
+                                >
+                            </li>
+                            <li><a href="">Gmail</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>EcoHub Metrics</h1>
+            <div id="counter-section">
+                <div id="treesPlanted" class="counter">
+                    <p class="counterTitle">
+                        Trees <span class="inverted">planted</span> this year
+                    </p>
+                    <p class="counterBio">
+                        On avrage 1.9 Billion trees are planted each year
+                    </p>
+                    <div id="counterTrees">
+                        <figure>
+                            <img
+                                src="./Assets/treeIcon.png"
+                                alt="A green tree"
+                                id="greenTree"
+                            />
+                        </figure>
+                        <p class="numbers">
+                            Total: 1,900,000,000.
+                            <span class="expand">[+]</span>
+                        </p>
+                    </div>
+                    <div id="tree-expansion">
+                        <p>Weekly: 123,456,789</p>
+                        <p>Daily: 123,123,1234</p>
+                        <p>Hourly: 555,555,555,555</p>
+                    </div>
                 </div>
-                <div id="tree-expansion">
-                    <p>Weekly: 123,456,789</p>
-                    <p>Daily: 123,123,1234</p>
-                    <p>Hourly: 555,555,555,555</p>
+                <div id="deforestation" class="counter">
+                    <p class="counterTitle">
+                        Trees <span class="inverted">lost</span> this year
+                    </p>
+                    <p class="counterBio">
+                        On avrage 15 Billion trees are lost each year
+                    </p>
+                    <div id="counterLost">
+                        <figure>
+                            <img
+                                src="./Assets/cutIcon.png"
+                                alt="A tree lost "
+                                id="treeLost"
+                            />
+                        </figure>
+                        <p class="numbers">
+                            Total: 15,000,000,000
+                            <span class="expand">[+]</span>
+                        </p>
+                    </div>
+                    <div id="lost-expansion">
+                        <p>Weekly: 123,456,789</p>
+                        <p>Daily: 123,123,1234</p>
+                        <p>Hourly: 555,555,555,555</p>
+                    </div>
                 </div>
             </div>
-            <div id="deforestation" class="counter">
-                <p class="counterTitle">Trees lost this year</p>
-                <p class="counterBio">On avrage 15 Billion trees are lost each year</p>
-                <div id="counterLost">
-                    <figure>
-                        <img src="./Assets/cutIcon.png" alt="A tree lost " id="treeLost">
-                    </figure>
-                    <p class="numbers">Total: 15,000,000,000 <span class="expand">[+]</span></p>
-                </div>
-                <div id="lost-expansion">
-                    <p>Weekly: 123,456,789</p>
-                    <p>Daily: 123,123,1234</p>
-                    <p>Hourly: 555,555,555,555</p>
-                </div>
-            </div>
-        </div>
-    </main>
-</body>
+        </main>
+    </body>
 </html>
