@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Roboto Flex', 'Times New Roman', Times, serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    gap: 40px;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: relative;
+    width: 100%;
+}
+
+header nav {
+    flex: 1; /* Makes the nav take up available space */
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logoName {
+    font-size: 1.5rem;
+    color: rgb(0, 183, 255);
+    font-weight: bolder;
+    padding: .5rem;
+    width: 7.5rem;
+    margin-left: .5rem;
+}
+
+header nav ul li a {
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+header nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(84, 198, 243);
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+header nav ul li:hover a::before {
+    width: 100%;
+}
+
+.login-btn {
+    position: absolute;
+    right: 2rem;
+    height: 2rem;
+    width: 7rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgb(84, 198, 243);
+    color: white;
+    font-weight: bold;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    scale: 1.1;
+}
+
+.login-btn:active {
+    scale: 0.9;
+}
+
+.menuIcon {
+    display: none;
+    transition: scale 0.1s ease-in;
+    cursor: pointer;
+}
+
+.menuIcon:hover {
+    scale: 1.1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+/* Default behavior when screen is smaller than a certain width */
+.nav-links.active {
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Main CSS for all screens (desktop and larger devices) */
+@media only screen and (max-width: 1200px) {
+    .logoName {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    header nav ul {
+        gap: 30px;
+    }
+
+    .logoName {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .login-btn {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Mobile-friendly adjustments */
+@media only screen and (max-width: 768px) {
+    .logoName {
+        font-size: 1.2rem;
+    }
+
+    header nav ul li a {
+        font-size: 1.1rem;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    /* Hide the navigation links by default on small screens */
+    header nav ul {
+        display: none;
+    }
+
+    /* Show the navigation links when the menu icon is clicked */
+    .menuIcon:checked + .nav-links {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 662px) {
+    .resume, .forBusiness {
+        display: none;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    header nav ul {
+        gap: 20px;
+    }
+
+    .logoName {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .logoName {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        gap: 30px;
+        position: relative;
+        right: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 457px) {
+    header nav ul {
+        display: none; /* Hide nav links */
+    }
+
+    .logoName {
+        font-size: 2rem; /* Make the title/logo stand out */
+        text-align: center;
+        width: 100%;
+        position: relative;
+        right: 3rem;
+    }
+
+    /* Show menu icon on smaller screens */
+    .menuIcon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Hide the navigation items by default */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Show the navigation links when the menu icon is clicked */
+    .menuIcon:checked + .nav-links {
+        display: block;
+    }
+}
+
+/* Custom breakpoint for extra small devices */
+@media only screen and (max-width: 375px) {
+    .logoName {
+        font-size: 1.5rem;
+        position: relative;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    .menuIcon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .nav-links {
+        font-size: 0.9rem;
+    }
+}
+
+
+/*Style the main section*/
+
+.hero-img {
+    max-height: 25rem; 
+    object-fit: cover; 
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem; 
+    margin-top: 1rem;
+    margin-right: 2.7rem;
+}
+
+.hero-text {
+    padding-left: 4rem; 
+}
+
+h1 {
+    color: rgb(28, 184, 246);
+    font-size: 3.5rem; 
+    font-weight: 800;
+}
+
+.hero-sub {
+    font-size: 1rem; 
+    color: gray;
+    margin-bottom: 1rem; 
+}
+
+.hero-description {
+    width: 33rem;
+    font-size: 1.1rem; 
+    line-height: 1.7; 
+    font-family: 'Open Sans', sans-serif; 
+    color: #333;
+    
+    height: fit-content;
+}
+
+.tags {
+    display: flex;
+    gap: 1.3rem;
+    width: fit-content;
+}
+
+.tags p {
+    background-color: rgb(28, 184, 246);
+    font-weight: bolder;
+    border: 1px solid;
+    width: 5.5rem;
+    text-align: center;
+    padding: .2rem;
+    font-size: .8rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+#more {
+    background-color: rgb(167, 167, 167);
+    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.projects-btn {
+    margin-left: 9rem;
+    margin-top: 1.2rem;
+    height: 2.2rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgb(84, 198, 243);
+    color: white;
+    font-weight: bold;
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.projects-btn:hover {
+    scale: 1.1;
+    transition: all 0.1s;
+}
+
+.projects-btn:active {
+    scale: .99;
+    transition: all .1s;
+}
